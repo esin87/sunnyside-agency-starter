@@ -232,12 +232,8 @@ a.site-main-item_link {
     margin-top: -50px;
 }
 
-.mobile-nav {
-    height: 100%;
-    width: 0px;
-    position: fixed;
-    top: 0;
-    right: 0;
+.site-header-nav {
+    display: none;
 }
 
 .transform {
@@ -327,8 +323,49 @@ a.site-main-item_link {
 
 
 /* TODO: Add Desktop Styles */
-/* @media screen and (min-width: 760px) {
+@media screen and (min-width: 768px) {
+    /* TODO: show desktop menu/nav */
+    /* TODO: Add active state to contact link */
     .container {
         max-width: 1440px;
     }
-} */
+
+    .site-header {
+        background-image: url('../images/desktop/image-header.jpg');
+        color: var(--white);
+    }
+
+    .site-header--top {
+        align-items: center;
+    }
+
+    .hamburger-menu-icon-wrapper {
+        display: none;
+    }
+
+    .site-header-nav {
+        display: block;
+        width: 40%;
+    }
+
+    .site-header-nav-list-wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .site-header-nav-item--contact {
+        background-color: var(--white);
+        padding: 1.5rem;
+        border-radius: 2rem;
+        font-family: 'Fraunces', serif;
+        text-transform: uppercase;
+        color: var(--very-dark-desaturated-blue);
+        transition: all 0.3s;
+    }
+
+    .site-header-nav-item--contact:hover {
+       background-color: rgba(255,255,255, 0.25);
+       color: var(--white);
+    }
+}
