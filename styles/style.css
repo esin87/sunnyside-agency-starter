@@ -21,6 +21,7 @@
     box-sizing: border-box;
 }
 
+/* Smooth scroll on jump links */
 html, body {
     scroll-behavior: smooth;
 }
@@ -282,11 +283,23 @@ a.site-main-item_link {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    height: 40vh;
 }
 
-.site-img-gallery-item {
-    width: 100%;
-    height: 100%;
+.site-img-gallery-item-wrapper.milk {
+    background-image: url('../images/mobile/image-gallery-milkbottles.jpg');
+}
+
+.site-img-gallery-item-wrapper.orange {
+    background-image: url('../images/mobile/image-gallery-orange.jpg');
+}
+
+.site-img-gallery-item-wrapper.cone {
+    background-image: url('../images/mobile/image-gallery-cone.jpg');
+}
+
+.site-img-gallery-item-wrapper.sugar {
+    background-image: url('../images/mobile/image-gallery-sugar-cubes.jpg');
 }
 
 /* Footer */
@@ -327,7 +340,7 @@ a.site-main-item_link {
     /* TODO: show desktop menu/nav */
     /* TODO: Add active state to contact link */
     .container {
-        max-width: 1440px;
+        max-width: 1200px;
     }
 
     .site-header {
@@ -372,6 +385,7 @@ a.site-main-item_link {
     .site-main-item--transform, .site-main-item--stand-out, .site-main-item_wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50vw;
         grid-auto-flow: column;
     }
 
@@ -380,18 +394,104 @@ a.site-main-item_link {
     }
 
     .transform {
-            background-image: url('../images/desktop/image-transform.jpg');
+        background-image: url('../images/desktop/image-transform.jpg');
     }
     
     .stand-out {
-            background-image: url('../images/desktop/image-stand-out.jpg')
+        background-image: url('../images/desktop/image-stand-out.jpg')
     }
     
     .site-main-item--graphic-design {
-            background-image: url('../images/desktop/image-graphic-design.jpg');
+        background-image: url('../images/desktop/image-graphic-design.jpg');
     }
     
     .site-main-item--photography {
-            background-image: url('../images/desktop/image-photography.jpg');
+        background-image: url('../images/desktop/image-photography.jpg');
     }
+
+    .site-testimonials-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 7rem;
+    }
+
+    .site-testimonials-container h2 {
+        flex-basis: 100%;
+    }
+
+    .site-testimonials--item-wrapper {
+        flex-basis: 25%;
+        margin: 0 1rem;
+        display: grid;
+        grid-template-rows: 2fr 3fr 0.5fr 0.5fr;
+    }
+
+    .site-footer_nav {
+        width: 40%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .site-img-gallery {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .site-main-item--graphic-design,
+    .site-main-item--photography {
+        height: 100%;
+    }
+    
+    .transform,
+    .stand-out {
+        height: auto;
+    }
+
+    .site-main-item_text-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .site-main-item--transform *, .site-main-item--stand-out * {
+        text-align: left;
+    }
+
+    h3.site-main-item_link-wrapper {
+        margin-left: 0;
+        min-width: 150px;
+    }
+
+    a.site-main-item_link {
+        left: 0.5rem;
+        top: -0.5rem;
+        transform: none;
+    }
+    
+    .site-img-gallery-item-wrapper.milk {
+        background-image: url('../images/desktop/image-gallery-milkbottles.jpg');
+    }
+    
+    .site-img-gallery-item-wrapper.orange {
+        background-image: url('../images/desktop/image-gallery-orange.jpg');
+    }
+    
+    .site-img-gallery-item-wrapper.cone {
+        background-image: url('../images/desktop/image-gallery-cone.jpg');
+    }
+    
+    .site-img-gallery-item-wrapper.sugar {
+        background-image: url('../images/desktop/image-gallery-sugarcubes.jpg');
+    }
+}
+
+/* On screens wider than 1200px, grid rows should be 600px tall to maintain square aspect ratio */
+@media screen and (min-width:1200px) {
+    .site-main-item--transform,
+    .site-main-item--stand-out,
+    .site-main-item_wrapper {
+        grid-template-rows: 600px;
+    }
+    
 }
