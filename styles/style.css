@@ -99,6 +99,19 @@ h4.client-role {
 .site-footer_nav--links li a {
     color: var(--dark-moderate-cyan);
     font-size: 1.25rem;
+    transition: color 0.3s;
+}
+
+.site-footer_nav--links a:hover {
+    color: var(--white);
+}
+
+.site-footer_nav--socials svg path {
+    transition: fill 0.3s;
+}
+
+.site-footer_nav--socials a:hover svg path {
+    fill: var(--white);
 }
 
 /* Links Low Highlight */
@@ -132,7 +145,6 @@ h3.site-main-item_link-wrapper--yellow:hover {
     background-color: var(--yellow);
 }
 
-
 a.site-main-item_link {
     white-space: nowrap;
     position: absolute;
@@ -145,7 +157,6 @@ a.site-main-item_link {
     text-transform: uppercase;
     color: var(--very-dark-desaturated-blue);
 }
-
 
 /* Utilities */
 .p1 { 
@@ -315,9 +326,9 @@ a.site-main-item_link {
 }
 
 
-/* Desktop Styles */
-@media screen and (min-width: 760px) {
+/* TODO: Add Desktop Styles */
+/* @media screen and (min-width: 760px) {
     .container {
         max-width: 1440px;
     }
-}
+} */
