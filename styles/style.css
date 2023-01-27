@@ -1,0 +1,323 @@
+:root {
+    /* Primary */
+    --soft-red: hsl(7 99% 70%);
+    --light-soft-red: hsl(7 99% 70% / 0.3);
+    --yellow: hsl(51 100% 49%);
+    --light-yellow: hsl(51 100% 49% / 0.3);
+    --dark-desaturated-cyan: hsl(167 40% 24%); /* Graphic design text */
+    --dark-blue: hsl(198 62% 26%); /* Photography text */
+    --light-moderate-cyan: hsl(166, 36.2%, 74.4%);
+    --dark-moderate-cyan: hsl(168 34% 41%); /* Footer */
+    /* Neutrals */
+    --very-dark-desaturated-blue: hsl(212 27% 19%);
+    --very-dark-grayish-blue: hsl(213 9% 39%);
+    --dark-grayish-blue: hsl(232 10% 55%);
+    --grayish-blue: hsl(210 4% 67%);
+    --white: hsl(0 0% 100%);
+}
+
+/* https: //developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+/* Typography */
+html, body {
+    font-family: 'Barlow', sans-serif;
+    text-align: center;
+    /* Setting this root element font size means we can use REMs for proportional units of measurement */
+    font-size: 18px;
+}
+
+h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+}
+
+h1 {
+    color: var(--white);
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin: 4rem 1rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--very-dark-desaturated-blue);
+}
+
+
+p {
+    color: var(--dark-grayish-blue);
+    margin-bottom: 1.5rem;
+    line-height: 1.5rem;
+}
+
+a { 
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-testimonials-container p {
+    color: var(--very-dark-grayish-blue);
+    font-size: 1.25rem;
+    line-height: 2rem;
+
+}
+
+h2.site-testimonials-heading {
+    text-transform: uppercase;
+    color: var(--grayish-blue);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.25rem;
+}
+
+h3.client-name {
+    font-size: 1.25rem;
+    color: var(--very-dark-desaturated-blue);
+}
+
+h4.client-role {
+    color: var(--grayish-blue);
+}
+
+.site-main-item--graphic-design * {
+    color: var(--dark-desaturated-cyan);
+}
+
+.site-main-item--photography * {
+    color: var(--dark-blue);
+}
+
+.site-footer_nav--links li a {
+    color: var(--dark-moderate-cyan);
+    font-size: 1.25rem;
+}
+
+/* Links Low Highlight */
+
+h3.site-main-item_link-wrapper {
+    position: relative;
+    height: 0.75rem;
+    min-width: 100px;
+    max-width: 150px;
+    margin-top: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 1rem;
+    transition: background-color 0.3s;
+}
+
+h3.site-main-item_link-wrapper--yellow {
+    background-color: var(--light-yellow);
+}
+
+h3.site-main-item_link-wrapper--pink {
+    background-color: var(--light-soft-red);
+}
+
+/* Links Low Highlight Active States */
+h3.site-main-item_link-wrapper--pink:hover {
+    background-color: var(--soft-red);
+}
+
+h3.site-main-item_link-wrapper--yellow:hover {
+    background-color: var(--yellow);
+}
+
+
+a.site-main-item_link {
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    display: block;
+    font-family: 'Fraunces', serif;    
+    text-transform: uppercase;
+    color: var(--very-dark-desaturated-blue);
+}
+
+
+/* Utilities */
+.p1 { 
+    padding: 1rem;
+}
+
+.p2 {
+    padding: 2rem;
+}
+
+.p2-b {
+    padding-bottom: 2rem;
+}
+
+.p2-x {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.p2-y {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.p3-x {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.p3-y {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.p4-y {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.bg-center {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;  background-size: cover;
+}
+
+
+/* Layout */
+.container {
+    max-width: 494px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.site-header {
+    background-image: url('../images/mobile/image-header.jpg');
+    height: 70vh;
+    padding: 1rem;
+}
+
+.site-header--top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-header--main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: -50px;
+}
+
+.mobile-nav {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.transform {
+    background-image: url('../images/mobile/image-transform.jpg');
+}
+
+.stand-out {
+    background-image: url('../images/mobile/image-stand-out.jpg')
+}
+
+.site-main-item--graphic-design {
+    background-image: url('../images/mobile/image-graphic-design.jpg');
+}
+
+.site-main-item--photography {
+    background-image: url('../images/mobile/image-photography.jpg');
+}
+
+.site-main-item--graphic-design, .site-main-item--photography {
+    height: 60vh;
+}
+
+.transform, .stand-out {
+    height: 30vh;
+}
+
+.site-main-item--graphic-design, .site-main-item--photography {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.client-image-wrapper {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.client-image-wrapper img {
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.site-img-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.site-img-gallery-item {
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer */
+
+.site-footer {
+    background-color: var(--light-moderate-cyan);
+}
+
+.site-footer_logo-wrapper svg {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+}
+
+.site-footer_logo-wrapper path {
+    fill: var(--dark-moderate-cyan);
+    filter: brightness(0.7);
+}
+
+.site-footer_nav ul {
+    display: flex;
+}
+
+.site-footer_nav--links ul{
+    justify-content: space-between;
+}
+
+.site-footer_nav--socials ul {
+    justify-content: space-evenly;
+}
+
+.site-footer_nav--socials li {
+    font-size: 2rem;
+}
+
+
+/* Desktop Styles */
+@media screen and (min-width: 760px) {
+    .container {
+        max-width: 1440px;
+    }
+}
