@@ -368,4 +368,30 @@ a.site-main-item_link {
        background-color: rgba(255,255,255, 0.25);
        color: var(--white);
     }
+
+    .site-main-item--transform, .site-main-item--stand-out, .site-main-item_wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: column;
+    }
+
+    div.transform {
+        grid-column: 2;
+    }
+
+    .transform {
+            background-image: url('../images/desktop/image-transform.jpg');
+    }
+    
+    .stand-out {
+            background-image: url('../images/desktop/image-stand-out.jpg')
+    }
+    
+    .site-main-item--graphic-design {
+            background-image: url('../images/desktop/image-graphic-design.jpg');
+    }
+    
+    .site-main-item--photography {
+            background-image: url('../images/desktop/image-photography.jpg');
+    }
 }
